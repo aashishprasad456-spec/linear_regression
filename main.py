@@ -28,6 +28,6 @@ x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2)
 
 
 model.fit(x_train,y_train)
-print(model.score(x_test,y_test))
+print(f"Accuracy : {model.score(x_test,y_test)*100}%")
 with open("model.pkl","wb") as fileObj:
     pkl.dump(model,fileObj)
